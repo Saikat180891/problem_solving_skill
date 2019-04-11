@@ -1,13 +1,13 @@
 function maxmin(...args) {
   let max = args[0];
   let min = args[0];
-  args.forEach((ele, i) => {
-    if (i === args.length - 1) return;
-    if (!(max > args[i + 1])) {
-      max = args[i + 1];
+  args.forEach((ele, i, self) => {
+    if (i === self.length - 1) return;
+    if (!(max > self[i + 1])) {
+      max = self[i + 1];
     }
-    if (min > args[i + 1]) {
-      min = args[i + 1];
+    if (min > self[i + 1]) {
+      min = self[i + 1];
     }
   });
   return {
