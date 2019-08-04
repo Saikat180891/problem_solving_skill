@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      div {
+        padding: 10px;
+        border: 1px solid #000000;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="grandpa">
+      grandpa
+      <div id="father">
+        father
+        <div id="child">child</div>
+      </div>
+    </div>
+    <script>
+      //   let divs = document.querySelectorAll("div");
+      //   divs.forEach((item, i) => {
+      //     item.addEventListener("click", bubble, true);
+      //     // item.addEventListener("click", capture, true); //capturing mode
+      //   });
+      //   function bubble(event) {
+      //     console.log(event.target.id);
+      //   }
+      //   function capture(event) {
+      //     console.log(event.target.id);
+      //   }
+
+      const body = document.addEventListener("click", event => {
+        console.log(event.target.id);
+      });
+    </script>
+  </body>
+</html>
